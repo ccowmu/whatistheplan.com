@@ -9,42 +9,38 @@
     <script src="{{STATIC_URL }}js/bootstrap.min.js" type="text/javascript"></script>
   </head>
   <body>
-  <div class="container">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
       <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
-              What is the Plan?
+              what is the plan?
             </a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li>
-              <a class="btn" href="/">Home</a>
+              <a class="btn" href="/">home</a>
             </li>
             <li>
-              <a class="btn" href="/events">Events</a>
+              <a class="btn" href="/events">events</a>
             </li>
             <li>
-              <a class="btn" href="/about">About</a>
+              <a class="btn" href="/about">about</a>
             </li>
-            {% if user.is_authenticated %}
-            {% else %}
-            <li>
-              <a class="btn" href="/signup">Sign Up</a>
-            </li>
-            {% endif %}
-            </ul>
+          </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}
             <li>
-              <a class="btn" href="/logout">Log Out</a>
+              <a class="btn" href="/logout">log out</a>
             </li>
             {% else %}
             <li>
-              <a class="btn" href="/login">Log In</a>
+              <a class="btn" href="/signup">sign up</a>
+            </li>
+             <li>
+              <a class="btn" href="/login">log in</a>
             </li>
             {% endif %}
           </ul>
@@ -56,13 +52,26 @@
       </div>
     <!-- end nav.navbar -->
     </nav>
+    <div class="container">
 
     <div class="container-fluid">
       <!-- The body content goes here -->
       {% block body_block %}{% endblock %}
     </div>
 
+
+  <footer id="footer-nav">
+    <nav class="navbar navbar-inverse navbar-static-bottom" id="bottom-nav">
+      <div class="container-fluid">
+        <div class="navbar-inner navbar-content-center">
+          <p class="text-muted credit">Hosted by Computer Club at WMU. <a href="mailto:plan@yakko.cs.wmich.edu">plan@yakko.cs.wmich.edu</a></p>
+        </div>
+      </div>
+    </nav>
+  </footer>
+
   <!-- end div.container -->
   </div>
+
   </body>
 </html>
