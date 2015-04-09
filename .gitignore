@@ -5,6 +5,9 @@ __pycache__/
 # C extensions
 *.so
 
+# SQLite3 database
+*.sqlite3
+
 # Distribution / packaging
 bin/
 build/
