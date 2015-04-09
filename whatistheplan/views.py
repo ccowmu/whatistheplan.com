@@ -1,21 +1,28 @@
-
+from django.template import RequestContext, loader
 from django.http import HttpResponse
+from django.shortcuts import render_to_response
 
 def index(request):
-    return HttpResponse("Hello from index!")
+    context = RequestContext(request)
+    return render_to_response('home.html', {}, context_instance=context)
 
 def events(request):
-    return HttpResponse("Hello from events!")
+    context = RequestContext(request)
+    return render_to_response('events.html', {}, context_instance=context)
 
 def about(request):
-    return HttpResponse("Hello from about!")
+    context = RequestContext(request)
+    return render_to_response('about.html', {}, context_instance=context)
 
 def signup(request):
-    return HttpResponse("Hello from signup!")
+    context = RequestContext(request)
+    return render_to_response('signup.html', {}, context_instance=context)
 
 def login(request):
-    return HttpResponse("Hello from login!")
+    context = RequestContext(request)
+    return render_to_response('login.html', {}, context_instance=context)
 
 def logout(request):
-    return HttpResponse("Hello from logout!")
+    context = RequestContext(request)
+    return render_to_response('home.html', {}, context_instance=context)
 
