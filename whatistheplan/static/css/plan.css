@@ -7,10 +7,17 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container {
+html, body {
+  max-height: 100%;
+}
+
+#content-container {
   width: 100%;
-  padding-top: 50px;
-  height: calc(100% - 100px);
+  min-height: calc(100% - 103px);
+  padding-top: 53px;
+  margin-top: 53px;
+  top: 53px;
+  padding-bottom: 0px
   bottom: 0;
   top: 0;
 }
@@ -19,24 +26,14 @@ iframe, object, embed {
   width: 100%;
 }
 
-#top-nav {
-
-}
-
-#footer-nav {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
 #bottom-nav {
   width: 100%;
-  padding: 0;
-  margin: 0;
+  height: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0px;
+  left: 0px;
+  right: 0px;
   bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
+  background: #111111;
 }
