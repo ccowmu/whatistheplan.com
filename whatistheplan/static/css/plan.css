@@ -1,8 +1,13 @@
 
-@import url(../font/SourceSansPro.ttf);
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../font/SourceSansPro.ttf) format('truetype');
+}
 
 * {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -48,11 +53,11 @@ a.custom-link {
 }
 
 .navbar-brand {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .navbar .btn {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #top-nav .navbar-brand {
