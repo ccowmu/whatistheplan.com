@@ -6,6 +6,14 @@
   src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../font/SourceSansPro.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Source Sans Pro Semibold Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Italic'), url(../font/SourceSansPro-SemiboldItalic.ttf) format('truetype');
+}
+
+
 * {
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -13,6 +21,11 @@
 
 html, body {
   max-height: 100%;
+}
+
+.bold-italic {
+  font-size: 36px !important;
+  font-family: 'Source Sans Pro Semibold Italic';
 }
 
 #content-container {
@@ -68,10 +81,12 @@ a.custom-link {
   color: #58778D;
 }
 
+/* Overwrite default background */
 .navbar-inverse {
  background: #333333 !important;
 }
 
+/* Bottom navbar */
 #bottom-nav {
   width: 100%;
   height: 50px;
@@ -89,3 +104,8 @@ a.custom-link {
   padding-left: 30px;
 }
 
+/* Fix two line (eg wrapped) input labels not lining up with input fields */
+.form-control.two-line-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

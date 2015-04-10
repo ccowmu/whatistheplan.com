@@ -4,32 +4,90 @@
 {% block body_block %}
 
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <form action="/signup" action="post">
-      <h2 class="page-header">creating an account</h2>
+  <div class="col-md-6 col-md-offset-3">
+    <form class="form-horizontal" action="/signup" action="post">
+      <h2 class="page-header bold-italic">creating account:</h2>
 
-      <p><h3 class="h3">first name</h3><hr>
-      <p><input class="form-control input-lg" type="text" name="firstname" placeholder="first name">
+      <div class="form-group">
+        <label for="firstname" class="control-label col-xs-4">first name:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="firstname-form" type="text" name="firstname" placeholder="first name">
+        </div>
+      </div>
+      <hr>
 
-      <p><h3 class="h3">last name</h3><hr>
-      <p><input class="form-control input-lg" type="text" name="lastname" placeholder="last name">
+      <div class="form-group">
+        <label for="lastname" class="control-label col-xs-4">last name:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="lastname-form" type="text" name="lastname" placeholder="last name">
+        </div>
+      </div>
+      <hr>
 
-      <p><h3 class="h3">username</h3><hr>
-      <p><input class="form-control input-lg" type="text" name="username" placeholder="username">
+      <div class="form-group">
+        <label for="username" class="control-label col-xs-4">username:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="username-form" type="text" name="username" placeholder="username">
+        </div>
+      </div>
+      <hr>
 
-      <h3 class="h3">enter a password:</h3><hr>
-      <p><input class="form-control input-lg" type="password" name="password" placeholder="password">
+      <div class="form-group">
+        <label for="password" class="control-label col-xs-4">enter a password:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="password-form" type="password" name="password" placeholder="password">
+        </div>
+      </div>
 
-      <h3 class="h3">repeat password:</h3><hr>
-      <p><input class="form-control input-lg" type="password" name="password" placeholder="password">
+      <div class="form-group">
+        <label for="password" class="control-label col-xs-4">repeat password:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="password-form" type="password" name="password" placeholder="password">
+        </div>
+      </div>
+      <hr>
 
-      <h3 class="h3">email:</h3><hr>
-      <p><input class="form-control input-lg" type="text" name="email" placeholder="email"><br>
+      <div class="form-group">
+        <label for="email" class="control-label col-xs-4">email:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="email-form" type="email" name="email" placeholder="email">
+        </div>
+      </div>
+      <hr>
 
-      <p><button class="btn btn-lg btn-primary btn-custom" type='submit'>Submit</button>
+      <div class="form-group">
+        <label for="mac" class="control-label col-xs-4">mac address (for network registration):</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg two-line-input" id="mac-form" type="text" name="mac" placeholder="mac address">
+        </div>
+      </div>
+      <hr>
+
+      <div class="form-group">
+        <label for="steam" class="control-label col-xs-4">steam username:</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg" id="steam-form" type="text" name="steam" placeholder="steam username">
+        </div>
+      </div>
+      <hr>
+
+      <div class="form-group">
+        <label for="irc" class="control-label col-xs-4">irc handle (if applicable):</label>
+        <div class="col-xs-6">
+          <input class="form-control input-lg two-line-input" id="irc-form" type="text" name="irc" placeholder="irc handle">
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="col-xs-2 col-xs-offset-8">
+          <button class="btn btn-lg btn-primary pull-right btn-custom" type='submit'>Submit</button>
+        </div>
+      </div>
     </form>
     <!-- end div.col-md-4.col-md-offset-4 -->
   </div>
 <!-- end div.row -->
 </div>
+
 {% endblock %}
