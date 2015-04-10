@@ -109,3 +109,15 @@ a.custom-link {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.img-icons li a {
+  position: relative;
+  height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.img-icons img {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  height: 45px;
+}
