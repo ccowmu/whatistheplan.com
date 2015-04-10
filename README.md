@@ -1,7 +1,7 @@
 whatistheplan.com
 =================
 
-This is to become the newest rendition of the website we use for our semi-annual Parkview Lan. As opposed to previous renditions, this will have active features such as chatrooms (irc backed), user registration, and various administrative capabilities. It will be built using the popular django python web framework in an open-source and collaborative work environment. 
+This is to become the newest rendition of the website we use for our semi-annual Parkview Lan. As opposed to previous renditions, this will have active features such as chatrooms (irc backed), user registration, and various administrative capabilities. It will be built using the popular django python web framework in an open-source and collaborative work environment.
 
 Features
 --------
@@ -14,9 +14,21 @@ Features
 Development
 -----------
 
-Anybody interested in helping with development should make themselves familiar with django and python. All skill levels are welcome, however you must have a willingness to learn.
+Primary development discussion will take place on the computer club IRC network in the #plansite channel. Anybody interested in helping with development should make themselves familiar with django and python. All skill levels are welcome, however you must have a willingness to learn. A simple django introduction can be found at http://www.tangowithdjango.com/book17/index.html
 
-A simple django introduction can be found at http://www.tangowithdjango.com/book17/index.html
+Getting started:
+
+- Make sure you have python virtualenv installed. If you are on ubuntu, installing is as simple as `sudo apt-get install python-virtualenv`
+- Make sure you have python 2 installed. Ubuntu comes with python2 as the default python
+- Run the following commands
+
+```shell
+git clone git@github.com:ccowmu/whatistheplan.com.git # download the sources
+cd whatistheplan                                      # change into the directory
+make setup                                            # set up the project
+make run                                              # start the development server
+```
+
 
 ### Design Decisions
 
