@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block body_block %}
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <form action="/login" action="post">
+      <h2 class="page-header">
+        please log in:
+      </h2><br>
+
+      <p><input class="form-control input-lg" type="text" name="username" placeholder="username">
+
+      <p><input class="form-control input-lg" type="password" name="password" placeholder="password"><br>
+
+      <p><button class="btn btn-lg btn-primary btn-custom" type='submit'>Submit</button>
+
+    </form>
+    <!-- end div.col-md-4.col-md-offset-4 -->
+  </div>
+<!-- end div.row -->
+</div>
+{% endblock %}
