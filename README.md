@@ -41,3 +41,8 @@ make run                                              # start the development se
     - Will be backed by IRC with a KiwiIRC frontend
 - URL Structure
   - Discussion welcomed at [#14](https://github.com/ccowmu/whatistheplan.com/issues/14)
+
+LICENSE
+-------
+
+This work is being developed under the MIT software license.
