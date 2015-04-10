@@ -21,4 +21,7 @@ db: db.sqlite3
 db.sqlite3:
 	bin/python manage.py migrate
 
-PHONY: setup virtualenv requirements run clean
+test:
+	bin/python manage.py test tests/
+
+PHONY: setup virtualenv requirements run clean test
