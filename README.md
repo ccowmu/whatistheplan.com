@@ -39,6 +39,10 @@ make run                                              # start the development se
   - Twitter
   - Chat rooms
     - Will be backed by IRC with a KiwiIRC frontend
+- User data stored in the database
+  - Payments and sign-ins
+- Simple database-backed news feed
+- Event schedule page with notification system
 - URL Structure
   - Discussion welcomed at [#14](https://github.com/ccowmu/whatistheplan.com/issues/14)
 
