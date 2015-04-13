@@ -16,7 +16,7 @@ Development
 
 Primary development discussion will take place on the computer club IRC network in the #plansite channel. Anybody interested in helping with development should make themselves familiar with django and python. All skill levels are welcome, however you must have a willingness to learn. A simple django introduction can be found at http://www.tangowithdjango.com/book17/index.html
 
-Getting started:
+### Getting started:
 
 - Make sure you have python virtualenv installed. If you are on ubuntu, installing is as simple as `sudo apt-get install python-virtualenv`
 - Make sure you have python 2 installed. Ubuntu comes with python2 as the default python
@@ -28,6 +28,27 @@ cd whatistheplan                                      # change into the director
 make setup                                            # set up the project
 make run                                              # start the development server
 ```
+
+### Make File
+
+- run **default target**
+  - Run the django server
+- setup
+  - Set up the environment
+  - Runs virtualenv, requirements, db
+- clean
+  - Deletes all files created during setup and runtime
+- virtualenv
+  - Sets up a local virtualenv with python2
+- requirements
+  - Installs requirements (in requirements.txt) into virtualenv
+- db
+  - Run db migrations
+- test
+  - Runs tests in tests/ directory
+- lint
+  - Check PEP8 coding standards
+
 
 
 ### Design Decisions

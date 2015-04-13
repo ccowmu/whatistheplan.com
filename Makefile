@@ -4,7 +4,7 @@ run: virtualenv
 setup: virtualenv requirements db
 
 clean:
-	rm -rf bin db.sqlite3 include lib pip-selfcheck.json
+	rm -rf bin db.sqlite3 include lib pip-selfcheck.json ./**/*.pyc ./**/__pycache__/
 
 virtualenv: bin/
 
@@ -14,9 +14,7 @@ bin/:
 requirements:
 	bin/pip install -r requirements.txt
 
-db: db.sqlite3
-
-db.sqlite3:
+db:
 	bin/python manage.py migrate
 
 test:
