@@ -11,9 +11,7 @@ virtualenv: bin/
 bin/:
 	virtualenv -p python2 .
 
-requirements: lib/python2.7/site-packages/django
-
-lib/python2.7/site-packages/django:
+requirements:
 	bin/pip install -r requirements.txt
 
 db: db.sqlite3
@@ -24,4 +22,7 @@ db.sqlite3:
 test:
 	bin/python manage.py test tests/
 
-PHONY: setup virtualenv requirements run clean test
+lint:
+	bin/pylint whatistheplan
+
+PHONY: setup virtualenv requirements run clean test lint

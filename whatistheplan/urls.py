@@ -1,9 +1,11 @@
+"""Define basic routes"""
 from django.conf.urls import include, url
 from django.contrib import admin
 
 # Import the views from views.py
 from . import views
-urlpatterns = [
+
+urlpatterns = [ # pylint: disable=invalid-name
     # Examples:
     # url(r'^$', 'whatistheplan.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
