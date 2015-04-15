@@ -1,3 +1,5 @@
+VERBOSITY ?= 1
+
 run: virtualenv
 	bin/python manage.py runserver
 
@@ -18,7 +20,7 @@ db:
 	bin/python manage.py migrate
 
 test:
-	bin/python manage.py test tests/
+	bin/python manage.py test -v $(VERBOSITY) tests/
 
 lint:
 	bin/pylint whatistheplan
