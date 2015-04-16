@@ -46,6 +46,7 @@ make run                                              # start the development se
   - Run db migrations
 - test
   - Runs tests in tests/ directory
+  - respects `VERBOSITY` environment variable values {0-3} (default 1)
 - lint
   - Check PEP8 coding standards
 
