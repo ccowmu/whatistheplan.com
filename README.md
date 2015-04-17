@@ -1,4 +1,4 @@
-whatistheplan.com [![Build Status](https://travis-ci.org/ccowmu/whatistheplan.com.svg?branch=master)](https://travis-ci.org/ccowmu/whatistheplan.com)
+whatistheplan.com [![Build Status](https://travis-ci.org/ccowmu/whatistheplan.com.svg?branch=master)](https://travis-ci.org/ccowmu/whatistheplan.com) [![Coverage Status](https://coveralls.io/repos/ccowmu/whatistheplan.com/badge.svg?branch=master)](https://coveralls.io/r/ccowmu/whatistheplan.com?branch=master)
 =================
 
 This is to become the newest rendition of the website we use for our semi-annual Parkview Lan. As opposed to previous renditions, this will have active features such as chatrooms (irc backed), user registration, and various administrative capabilities. It will be built using the popular django python web framework in an open-source and collaborative work environment.
