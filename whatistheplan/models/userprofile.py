@@ -11,3 +11,5 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, primary_key=True)
     name = models.CharField(max_length=256, unique=False)
     steamid = models.CharField(max_length=256)
+    irc = models.CharField(max_length=256, unique=False)
+    mac_address = models.CharField(max_length=256, unique=False)
