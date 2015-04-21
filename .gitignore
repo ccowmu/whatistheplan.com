@@ -34,3 +34,6 @@ pip-delete-this-directory.txt
 # virtualenv stuff
 include/
 pip-selfcheck.json
+
+htmlcov/
+.coverage
