@@ -49,6 +49,8 @@ make run                                              # start the development se
   - respects `VERBOSITY` environment variable values {0-3} (default 1)
 - lint
   - Check PEP8 coding standards
+- coverage
+  - run tests with coverage and output at htmlcov
 
 
 
