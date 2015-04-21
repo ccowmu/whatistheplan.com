@@ -25,4 +25,8 @@ test:
 lint:
 	bin/pylint whatistheplan
 
+coverage:
+	bin/coverage run --source=whatistheplan manage.py test tests/
+	bin/coverage html
+
 PHONY: setup virtualenv requirements run clean test lint

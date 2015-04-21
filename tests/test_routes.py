@@ -1,9 +1,13 @@
+from django.contrib.auth.models import User
 from django.test import Client, TestCase
 from django.core.urlresolvers import reverse
 
 class RoutesTest(TestCase):
     def setUp(self):
         self.client = Client()
+        self.logged_in_client = Client()
+        self.user = User.objects.create_user("testuser", "test@email.com", "test_password")
+        self.logged_in_client.login(username="testuser", password="test_password")
 
     def test_home_route(self):
         """Home returns 200"""
@@ -30,7 +34,11 @@ class RoutesTest(TestCase):
         response = self.client.get(reverse('Log In'))
         self.assertEqual(response.status_code, 200)
 
-    def test_log_out_route(self):
-        """Log Out returns 200"""
-        response = self.client.get(reverse('Log Out'))
+    def test_log_out_route_for_logged_in_user(self):
+        """Log Out redirects home for a logged in user"""
+        response = self.logged_in_client.get(reverse('Log Out'))
         self.assertEqual(response.status_code, 302)
+        self.assertEqual(response['Location'], 'http://testserver/')
+
+    def tearDown(self):
+        self.user.delete()
