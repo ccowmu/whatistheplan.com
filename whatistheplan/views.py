@@ -87,12 +87,12 @@ def user_login(request):
                 context_instance=context)
     else:
         return render_to_response('login.html',
-          {'login_msg': 'please log in:'},
-          context_instance=context)
+            {'login_msg': 'please log in:'},
+            context_instance=context)
 
 @login_required
 def user_logout(request):
     """Log out view"""
     logout(request)
-    return HttpResponseRedirect('/home/')
+    return HttpResponseRedirect('/')
 

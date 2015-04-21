@@ -33,4 +33,4 @@ class RoutesTest(TestCase):
     def test_log_out_route(self):
         """Log Out returns 200"""
         response = self.client.get(reverse('Log Out'))
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
