@@ -6,6 +6,6 @@ install:
     - pip install coveralls
     - python manage.py migrate --noinput
 script:
-    - coverage run --source=whatistheplan manage.py test tests
+    - coverage run --source=whatistheplan manage.py test -v 3 tests
 after_success:
     - coveralls
