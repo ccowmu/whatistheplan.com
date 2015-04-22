@@ -1,6 +1,7 @@
 from whatistheplan.forms import UserForm, UserProfileForm
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect
 
 def user_signup(request):
     """Sign up view"""
@@ -21,9 +22,8 @@ def user_signup(request):
             profile.user = user
             profile.save()
             registered = True
-            return render_to_response('login.html',
-                {'login_msg': 'account created'},
-                context_instance=context)
+            return HttpResponseRedirect('/login/')
+
         else:
             return render_to_response('signup.html',
                 {'user_form': user_form,
