@@ -1,7 +1,8 @@
+"""view controller for user login route"""
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth import authenticate, login
+from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
 def user_login(request):
@@ -18,16 +19,20 @@ def user_login(request):
                 login(request, user)
                 return HttpResponseRedirect(reverse('Home'))
             else:
-                return render_to_response('login.html',
+                return render_to_response(
+                    'login.html',
                     {'login_msg': 'user is inactive, please talk to an admin.'},
-                    context_instance=context)
+                    context_instance=context
+                )
         else:
-            return render_to_response('login.html',
+            return render_to_response(
+                'login.html',
                 {'login_msg': 'invalid credentials!'},
-                context_instance=context)
+                context_instance=context
+            )
     else:
-        return render_to_response('login.html',
+        return render_to_response(
+            'login.html',
             {'login_msg': 'please log in:'},
-            context_instance=context)
-
-
+            context_instance=context
+        )

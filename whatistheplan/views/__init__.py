@@ -1,7 +1,7 @@
-from about import about
-from events import events
-from index import index
-from user_login import user_login
-from user_logout import user_logout
-from user_signup import user_signup
-
+"""aggregate all view controllers for easier imports"""
+from whatistheplan.views.about import about
+from whatistheplan.views.events import events
+from whatistheplan.views.index import index
+from whatistheplan.views.user_login import user_login
+from whatistheplan.views.user_logout import user_logout
+from whatistheplan.views.user_signup import user_signup

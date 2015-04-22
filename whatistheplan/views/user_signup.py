@@ -1,3 +1,4 @@
+"""view controller for user signup route"""
 from whatistheplan.forms import UserForm, UserProfileForm
 from django.template import RequestContext
 from django.shortcuts import render_to_response
@@ -25,22 +26,29 @@ def user_signup(request):
             return HttpResponseRedirect('/login/')
 
         else:
-            return render_to_response('signup.html',
-                {'user_form': user_form,
-                'profile_form': profile_form,
-                'registered': registered,
-                'signup_msg': 'creating account',
-                'user_errors': user_form.errors,
-                'profile_errors': profile_form.errors},
-                context_instance=context)
+            return render_to_response(
+                'signup.html',
+                {
+                    'user_form': user_form,
+                    'profile_form': profile_form,
+                    'registered': registered,
+                    'signup_msg': 'creating account',
+                    'user_errors': user_form.errors,
+                    'profile_errors': profile_form.errors
+                },
+                context_instance=context
+            )
     else:
         user_form = UserForm()
         profile_form = UserProfileForm()
 
-    return render_to_response('signup.html',
-        {'user_form': user_form,
-        'profile_form': profile_form,
-        'registered': registered,
-        'signup_msg': 'creating account'},
-        context_instance=context)
-
+    return render_to_response(
+        'signup.html',
+        {
+            'user_form': user_form,
+            'profile_form': profile_form,
+            'registered': registered,
+            'signup_msg': 'creating account'
+        },
+        context_instance=context
+    )
