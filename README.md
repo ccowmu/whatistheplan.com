@@ -29,6 +29,9 @@ make setup                                            # set up the project
 make run                                              # start the development server
 ```
 
+### Coding Style
+Before beginning work please read our [style guide](STYLE.md).
+
 ### Make File
 
 - run **default target**
