@@ -10,7 +10,7 @@ Running Pylint
 --------------
 A make target named `lint` has been set up to make running pylint simple and easy. Simply run the command:
 ```
-make lint
+$ make lint
 ```
 Any violations should be explained by the output of pylint. Any confusing messages can be looked up in the
 [pylint docs](http://docs.pylint.org/features.html).
@@ -21,8 +21,8 @@ Aside from the PEP8 conventions, any
 other coding style preferences follow here.
 
 ### Line Length
-Pylint will not fail a line unless it is above 100 characters, however we prefer to keep lines shorter than 80
-characters where possible.
+Pylint defaults to a maximum line length of 100 characters, however we prefer to keep lines shorter than 80
+characters.
 
 ###Long Argument Lists
 Long argument lists that cause lines to be long can be broken into multiple lines. If that is the case we prefer

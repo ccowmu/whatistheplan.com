@@ -23,10 +23,10 @@ Primary development discussion will take place on the computer club IRC network 
 - Run the following commands
 
 ```shell
-git clone git@github.com:ccowmu/whatistheplan.com.git # download the sources
-cd whatistheplan                                      # change into the directory
-make setup                                            # set up the project
-make run                                              # start the development server
+$ git clone git@github.com:ccowmu/whatistheplan.com.git # download the sources
+$ cd whatistheplan                                      # change into the directory
+$ make setup                                            # set up the project
+$ make run                                              # start the development server
 ```
 
 ### Coding Style
