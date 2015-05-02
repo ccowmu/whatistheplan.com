@@ -10,7 +10,7 @@ class UserFormTest(TestCase):
         }
         self.user_profile_form_data = {
             'name': "Eugene M'TnDew",
-            'mac_address': '00:00:00:00i:00:00',
+            'mac_address': '00:00:00:00:00:00',
             'steamid': 'xXx_sn1par_eugene_420_xXx',
             'irc': 'eugene'
         }
@@ -31,5 +31,5 @@ class UserFormTest(TestCase):
     def test_user_form_submission_success(self):
         """form submission with sample data success"""
         resp = self.client.post("/signup/", self.form_data)
-        self.assertEqual(resp.status_code, 200)
+        self.assertEqual(resp.status_code, 302)
 

@@ -1,19 +1,27 @@
+"""Forms for use in whatistheplan"""
+#pylint: disable=no-init, old-style-class, too-few-public-methods
 from whatistheplan.models import UserProfile
 from django.contrib.auth.models import User
 from django import forms
 
 class UserForm(forms.ModelForm):
+    """Form for user signup"""
     password = forms.CharField(widget=forms.PasswordInput())
-    class Meta:
+    class Meta: #pylint: disable=missing-docstring
         model = User
-        fields = ('username',
+        fields = (
+            'username',
             'password',
-            'email')
+            'email'
+        )
 
 class UserProfileForm(forms.ModelForm):
-    class Meta:
+    """Form for user profile"""
+    class Meta: #pylint: disable=missing-docstring
         model = UserProfile
-        fields = ('name',
+        fields = (
+            'name',
             'irc',
             'steamid',
-            'mac_address')
+            'mac_address'
+        )
