@@ -35,6 +35,20 @@ class TestAuth(TestCase):
             target_status_code=200,
             )
 
+    def test_form_validation(self):
+        """Test valid validation"""
+        response = self.client.post(reverse('Sign Up'), {
+            'name': "Eugene M'TnDew",
+            'username': 'sn1par',
+            'password': 'bloxwich',
+            # This is an invalid email address
+            'email': 'h00bastank_r0xaol.com',
+            'mac_address': '00:00:00:00:00:00',
+            'steamid': 'xXx_sn1par_eugene_xXx',
+            'irc': 'eugene'
+            }, follow=True)
+        self.assertContains(response, text="Enter a valid email address.")
+
     def test_inactive_log_in(self):
         """Test that inactive accounts aren't able to log in"""
         # Create a user
