@@ -1,5 +1,8 @@
+from django.contrib.auth import authenticate, login
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
+from whatistheplan.models import UserProfile
 
 class TestAuth(TestCase):
     def test_sign_up(self):
@@ -31,6 +34,31 @@ class TestAuth(TestCase):
             status_code=302,
             target_status_code=200,
             )
+
+    def test_inactive_log_in(self):
+        """Test that inactive accounts aren't able to log in"""
+        # Create a user
+        response = self.client.post(reverse('Sign Up'), {
+            'name': "Billy Bob",
+            'username': 'quickscopr420',
+            'password': 'doritosfedoraeuphoria',
+            'email': 'quickscopr420@aol.com',
+            'mac_address': '00:00:00:00:00:00',
+            'steamid': 'billybob',
+            'irc': 'billybob'
+            }, follow=True)
+
+        # Disable the user
+        bill = User.objects.get(username='quickscopr420')
+        bill.is_active = False
+        bill.save()
+
+        # Check the response
+        response = self.client.post(reverse('Log In'), {
+            'username': 'quickscopr420',
+            'password': 'doritosfedoraeuphoria'
+            }, follow=True)
+        self.assertContains(response, text='user is inactive, please talk to an admin.')
 
     def test_invalid_log_in(self):
         """Test invalid log in, the user will not exist"""
