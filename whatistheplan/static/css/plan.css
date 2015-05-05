@@ -89,13 +89,13 @@ a.custom-link {
 
 /* Overwrite default background */
 .navbar-inverse {
- background: #333333 !important;
+  background: #333333 !important;
 }
 
 *:before {
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
 }
 
 /* Bottom navbar */
@@ -112,12 +112,6 @@ a.custom-link {
   padding-left: 30px;
 }
 
-/* Fix two line (eg wrapped) input labels not lining up with input fields */
-.form-control.two-line-input {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .img-icons li a {
   position: relative;
   height: 50px;
@@ -128,4 +122,5 @@ a.custom-link {
   margin-top: 3px;
   margin-bottom: 3px;
   height: 45px;
+  width: 45px;
 }

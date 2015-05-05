@@ -1,3 +1,4 @@
 django
 pylint
 coveralls
+django-widget-tweaks
