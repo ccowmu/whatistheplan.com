@@ -15,6 +15,7 @@ urlpatterns = [ # pylint: disable=invalid-name
     # Main app routes
     url(r'^$', views.index, name='Home'),
     url(r'^home/', views.index, name='Home'),
+    url(r'^events/(?P<num>[0-9]+)$', views.events, name='Events'),
     url(r'^events/', views.events, name='Events'),
     url(r'^about/', views.about, name='About'),
     url(r'^signup/', views.user_signup, name='Sign Up'),
