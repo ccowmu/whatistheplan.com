@@ -37,6 +37,11 @@ class EventTest(TestCase):
     def test_event_name(self):
         self.assertEqual(self.ev1.event_name, 'Modern Warfare 2 Quickscoping Contest')
 
+    def test_event_teams(self):
+        self.assertEqual(self.ev1.registered_teams.count(), 2)
+        self.assertEqual(self.ev1.registered_teams.filter(team_name='The Crows')[0], self.t1)
+        self.assertEqual(self.ev1.registered_teams.filter(team_name='Wildlings')[0], self.t2)
+
     def tearDown(self):
         self.game.delete()
         self.u1.delete()
