@@ -18,6 +18,7 @@ urlpatterns = [ # pylint: disable=invalid-name
     url(r'^events/', views.events, name='Events'),
     url(r'^about/', views.about, name='About'),
     url(r'^forum/', views.forum, name='Forum'),
+    url(r'^chat/', views.chat, name='Chat'),
     url(r'^signup/', views.user_signup, name='Sign Up'),
     url(r'^login/', views.user_login, name='Log In'),
     url(r'^logout/', views.user_logout, name='Log Out')

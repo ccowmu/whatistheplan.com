@@ -37,3 +37,6 @@ pip-selfcheck.json
 
 htmlcov/
 .coverage
+
+# Else
+.swp
