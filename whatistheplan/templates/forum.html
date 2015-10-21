@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block body_block %}
+<div class="row">
+              <h1>PLAN Forum</h1>  
+              <p>Our forum is being hosted in Google Groups. The embeded forum is below. You may have to sign in to a Google account to view or comment on this forum.</p>
+<iframe id="forum_embed"
+ src="javascript:void(0)"
+ scrolling="no"
+ frameborder="0"
+ width="900"
+ height="700">
+</iframe>
+
+<script type="text/javascript">
+ document.getElementById("forum_embed").src =
+  "https://groups.google.com/forum/embed/?place=forum/ccowmu" +
+  "&showsearch=true&showpopout=true&parenturl=" +
+  encodeURIComponent(window.location.href);
+</script>             
+          <div class="clear"></div> 
+  </div>
+
+{% endblock %}

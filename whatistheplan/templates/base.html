@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>what is the plan?</title>
+    {% load staticfiles %}
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/plan.css" rel="stylesheet">
+    <script src="{{STATIC_URL }}js/jquery.min.js" type="text/javascript"></script>
+    <script src="{{STATIC_URL }}js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="shortcut icon" type="image/png" href="{{STATIC_URL}}/img/wasd128.png"/>
+  </head>
+  <body>
+  <!-- This div is important for page layout, don't put any content outside it! -->
+  <div id="page-container">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="top-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            what is the plan?
+          </a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="btn" href="/">home</a>
+          </li>
+          <li>
+            <a class="btn" href="/events">events</a>
+          </li>
+          <li>
+            <a class="btn" href="/about">about</a>
+          </li>
+            <li>
+            <a class="btn" href="/forum">forum</a>
+          </li>
+          <li>
+            <a class="btn" href="https://www.flickr.com/photos/129058274@N06/" target="_blank">photos</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+          <li>
+            <a class="btn" href="/logout">log out</a>
+          </li>
+          {% else %}
+          <li>
+            <a class="btn" href="/signup">sign up</a>
+          </li>
+           <li>
+            <a class="btn" href="/login">log in</a>
+          </li>
+          {% endif %}
+        </ul>
+
+      <!-- end div#navbar -->
+      </div>
+
+    <!-- end div.container-fluid -->
+    </div>
+  <!-- end nav.navbar -->
+  </nav>
+  <div class="container" id="content-container">
+
+  <!-- The body content goes here -->
+  <div class="container-fluid">
+    {% block body_block %}{% endblock %}
+  </div>
+
+  <!-- end div.container -->
+  </div>
+
+  <!-- Nav footer -->
+  <div class="container" id="bottom-nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          PLAN is hosted by <a href="https://cclub.cs.wmich.edu/">Computer Club at WMU</a>.
+        </div>
+      </div>
+      <ul class="nav navbar-right navbar-nav img-icons">
+        <li><a href="https://steamcommunity.com/groups/ccowmu"><img src="{{ STATIC_URL }}img/steam.svg"></a></li>
+        <li><a href="https://plus.google.com/111884498936803742100/about"><img src="{{ STATIC_URL }}img/google.svg"></a></li>
+        <li><a href="https://facebook.com/ccowmu"><img src="{{ STATIC_URL }}img/facebook.svg"></a></li>
+        <li><a href="https://twitter.com/ccowmu"><img src="{{ STATIC_URL }}img/twitter.svg"></a></li>
+        <li><a href="https://www.flickr.com/photos/129058274@N06/"><img src="{{ STATIC_URL }}img/flickr.svg"></a></li>
+        <li><a href="https://github.com/ccowmu"><img src="{{ STATIC_URL }}img/github.svg"></a></li>
+        <li><a href="mailto:plan@cclub.cs.wmich.edu"><img src="{{ STATIC_URL }}img/email.svg"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- end div#container -->
+  </div>
+  </body>
+</html>

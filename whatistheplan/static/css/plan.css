@@ -1,0 +1,126 @@
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../font/SourceSansPro.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Semibold Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Italic'), url(../font/SourceSansPro-SemiboldItalic.ttf) format('truetype');
+}
+
+
+* {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.bold-italic {
+  font-size: 36px !important;
+  font-family: 'Source Sans Pro Semibold Italic';
+}
+
+#page-container {
+  min-height:100%;
+  position:relative;
+}
+
+#content-container {
+  padding:10px;
+  padding-bottom:60px;
+  width: 100%;
+  position: relative;
+  margin: 0px auto;
+  min-height: 100%;
+  padding-top: 53px;
+}
+
+iframe, object, embed {
+  width: 100%;
+}
+
+.btn-custom {
+  background: #58778D !important;
+  color: #F3F3F3;
+}
+
+.btn-custom:hover {
+  background: #58778D !important;
+  color: #333333;
+}
+
+a.custom-link {
+  color: #58778D !important;
+}
+
+#top-nav .nav > li > a {
+  color: #F3F3F3;
+}
+
+#top-nav .nav > li > a:hover {
+  color: #58778D;
+}
+
+.navbar-brand {
+  font-size: 20px;
+}
+
+.navbar .btn {
+  font-size: 18px;
+}
+
+#top-nav .navbar-brand {
+  color: #F3F3F3;
+}
+
+#top-nav .navbar-brand:hover {
+  color: #58778D;
+}
+
+/* Overwrite default background */
+.navbar-inverse {
+  background: #333333 !important;
+}
+
+*:before {
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+/* Bottom navbar */
+#bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: #333333;
+  color: #F3F3F3;
+}
+
+.li-nav-pad-left {
+  padding-left: 30px;
+}
+
+.img-icons li a {
+  position: relative;
+  height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.img-icons img {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  height: 45px;
+  width: 45px;
+}

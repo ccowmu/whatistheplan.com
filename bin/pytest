@@ -1,0 +1,7 @@
+#!/home/blake/github/whatistheplan.com/bin/python2
+
+import warnings
+warnings.simplefilter('default', DeprecationWarning)
+
+from logilab.common.pytest import run
+run()
