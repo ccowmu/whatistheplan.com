@@ -1,1 +1,1 @@
-web: waitress-serve --port=80 whatistheplan.wsgi:application
+web: waitress-serve --port=8000 whatistheplan.wsgi:application
