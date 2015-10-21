@@ -1,5 +1,6 @@
 """aggregate all view controllers for easier imports"""
 from whatistheplan.views.about import about
+from whatistheplan.views.chat import chat
 from whatistheplan.views.events import events
 from whatistheplan.views.index import index
 from whatistheplan.views.forum import forum
