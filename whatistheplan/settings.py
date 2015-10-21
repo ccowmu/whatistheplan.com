@@ -106,7 +106,7 @@ TEMPLATE_DIRS = (
 )
 
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
