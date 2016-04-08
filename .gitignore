@@ -40,3 +40,4 @@ htmlcov/
 
 # Else
 .swp
+**.save*
