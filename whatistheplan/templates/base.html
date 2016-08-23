@@ -1,7 +1,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>what is the plan?</title>
+		{% block title_block } 
+    <title>What is the PLAN?</title>
+		{% endblock %}
     {% load staticfiles %}
     <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/plan.css" rel="stylesheet">
@@ -17,32 +19,32 @@
     <div class="container-fluid">
       <div class="navbar-header">
           <a class="navbar-brand" href="/">
-            what is the plan?
+            What is the PLAN?
           </a>
       </div>
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li>
-            <a class="btn" href="/">home</a>
+            <a class="btn" href="/">Home</a>
           </li>
           <li>
-            <a class="btn" href="/events">events</a>
+            <a class="btn" href="/events">Events</a>
           </li>
           <li>
-            <a class="btn" href="/about">about</a>
+            <a class="btn" href="/about">About</a>
           </li>
             <li>
-            <a class="btn" href="/forum">forum</a>
+            <a class="btn" href="/forum">Forum</a>
           </li>
        	   <li>
-            <a class="btn" href="/sponsors">sponsors</a>
+            <a class="btn" href="/sponsors">Sponsors</a>
           </li>
 	           <li>
-            <a class="btn" href="/photos">photos</a>
-	   <li>
+            <a class="btn" href="/photos">Photos</a>
+						<!-- <li>
             <a class="btn" href="/chat">PLANchat</a>
-          </li>
+						</li> -->
 
           </li>
         </ul>
