@@ -1,7 +1,7 @@
 VERBOSITY ?= 1
 
 run: virtualenv
-	bin/python manage.py runserver
+	bin/python manage.py runserver 0.0.0.0:8000
 
 setup: virtualenv requirements db
 

@@ -1,8 +1,7 @@
 """view controller for events route"""
 from django.template import RequestContext
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 
 def events(request):
     """Events view"""
-    context = RequestContext(request)
-    return render_to_response('events.html', {}, context_instance=context)
+    return render(request, 'events.html', {})
