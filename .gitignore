@@ -43,4 +43,8 @@ htmlcov/
 **.save*
 
 # Komodo project files
-.komodoproject
+*.komodoproject
+
+# Vagrant stuff
+.vagrant/
+
