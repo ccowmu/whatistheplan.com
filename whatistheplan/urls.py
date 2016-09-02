@@ -23,5 +23,6 @@ urlpatterns = [ # pylint: disable=invalid-name
     url(r'^photos/', views.photos, name='Photos'),
     url(r'^signup/', views.google_signup, name='Sign Up'),
     url(r'^login/', views.user_login, name='Log In'),
-    url(r'^logout/', views.user_logout, name='Log Out')
+    url(r'^logout/', views.user_logout, name='Log Out'),
+    url(r'^twitch/', views.twitch, name='Twitch')
 ]

@@ -24,6 +24,10 @@ class RoutesTest(TestCase):
         response = self.client.get(reverse('About'))
         self.assertEqual(response.status_code, 200)
 
+    def test_twitch_route(self):
+        response = self.client.get(reverse('Twitch'))
+        self.assertEqual(response.status_code, 200)
+
     def test_sign_up_route(self):
         """Sign Up returns 200"""
         response = self.client.get(reverse('Sign Up'))
