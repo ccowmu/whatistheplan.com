@@ -10,3 +10,4 @@ from whatistheplan.views.user_login import user_login
 from whatistheplan.views.user_logout import user_logout
 from whatistheplan.views.user_signup import user_signup
 from whatistheplan.views.google_signup import google_signup
+from whatistheplan.views.twitch import twitch

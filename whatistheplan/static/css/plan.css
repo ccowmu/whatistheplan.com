@@ -50,6 +50,11 @@ iframe, object, embed {
   height:100%;
 }
 
+#twitch {
+  width: 100%;
+  height: 56.25%;
+}
+
 .btn-custom {
   background: #58778D !important;
   color: #F3F3F3;
