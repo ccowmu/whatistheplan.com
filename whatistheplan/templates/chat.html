@@ -1,26 +1,16 @@
 {% extends "base.html" %}
 
-
 {% block body_block %}
-<div>
-  <div>
 
-    <iframe src="https://discordapp.com/widget?id=146131424112541697&theme=dark" width="30" height="500" allowtransparency="true" frameborder="0"></iframe>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <h2 class="h2">Discord Chat</h2>
+    <hr>
 
-    <iframe src="http://104.131.213.190:7778" style="border:0; width:100%; height:100%;"></iframe>
+    <iframe id="twitch" src="https://discordapp.com/widget?id=146131424112541697&theme=dark" width="620" height="378" allowtransparency="true" frameborder="0"></iframe>
+    <a href="https://discordapp.com/invite/z3qjh?utm_source=Discord%20Widget&utm_medium=Connect" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px;text-decoration:underline;">Join our Discord chat for PLAN at www.discordapp.com</a>
 
-<!-- end div.col-md-offset-2.col-md-2 -->
-  </div>
-<!-- end div.row -->
-</div>
-
-<script>
-$(document).ready(function() {
-	$('#page-container').css('max-height', '100%');
-	$(window).on('resize', function() {
-		$('#kiwiframe').css('height', ($(window).height() - 119) + 'px');
-	}).resize();
-});
-</script>
+  </div> <!-- end div.col-md-offset-2.col-md-2 -->
+</div> <!-- end div.row -->
 
 {% endblock %}
